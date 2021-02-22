@@ -2,7 +2,7 @@
 //  ImageScrollView.swift
 //  TestPhotoApp
 //
-//  Created by Даниил Статиев on 21.02.2021.
+//  Created by Даниил Статиев on 22.02.2021.
 //
 
 import UIKit
@@ -11,14 +11,13 @@ class ImageScrollView: UIScrollView {
     
     var imageZoomView: UIImageView?
     lazy var zoomingTap: UITapGestureRecognizer = {
-        let zoomingTap = UITapGestureRecognizer(target: self, action: #selector(doubleTap))
-        zoomingTap.numberOfTouchesRequired = 2
+        let zoomingTap = UITapGestureRecognizer(target: self, action: #selector(oneTap))
+        zoomingTap.numberOfTouchesRequired = 1
         return zoomingTap
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         self.delegate = self
         self.showsVerticalScrollIndicator = false
         self.showsHorizontalScrollIndicator = false
@@ -51,7 +50,7 @@ class ImageScrollView: UIScrollView {
         self.centerImage()
     }
     
-    @objc func doubleTap(sender: UITapGestureRecognizer) {
+    @objc func oneTap(sender: UITapGestureRecognizer) {
         let location = sender.location(in: sender.view)
         self.zoom(point: location, animeted: true)
     }

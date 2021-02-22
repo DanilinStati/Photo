@@ -30,12 +30,13 @@ class PhotosCollectionViewController: UIViewController {
         setupSpinner()
         setupRefreshControl()
         downloadStartImage()
-        
     }
     
     private func downloadStartImage() {
+        spinner.startAnimating()
         networkDataFetcher.fetchImages(searchTerm: "Photo") { [weak self] (searchResults) in
             guard let fetchPhotos = searchResults else { return }
+            self?.spinner.stopAnimating()
             self?.photos = fetchPhotos.results
             self?.collectionView.reloadData()
         }

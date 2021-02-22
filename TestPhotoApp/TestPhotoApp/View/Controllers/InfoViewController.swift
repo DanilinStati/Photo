@@ -82,7 +82,7 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .portrait
         setupImageView()
         setupVerticalStackView()
         setupGestureInImageView()
@@ -98,7 +98,6 @@ class InfoViewController: UIViewController {
     @objc private func tapImage() {
         let photoVC = PhotoViewController()
         photoVC.unsplashPhoto = unsplashPhoto
-        //photoVC.photoImageView = photoImageView
         self.present(photoVC, animated: true)
     }
     

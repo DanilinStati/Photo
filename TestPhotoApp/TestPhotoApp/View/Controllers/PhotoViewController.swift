@@ -21,7 +21,6 @@ class PhotoViewController: UIViewController {
     var photoImageView: UIImageView = {
         let photo = UIImageView()
         photo.translatesAutoresizingMaskIntoConstraints = false
-        photo.backgroundColor = .systemBackground
         photo.contentMode = .scaleAspectFit
         photo.clipsToBounds = true
         return photo
@@ -32,22 +31,18 @@ class PhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .allButUpsideDown
-        //setupImageView()
-        
+        setupScrollView()
+        setupImageScrollView()
+    }
+    
+    private func setupScrollView() {
         imageScrollView = ImageScrollView(frame: view.bounds)
+        imageScrollView?.backgroundColor = .systemBackground
         view.addSubview(imageScrollView ?? UIImageView())
-        
         let imagePath = photoImageView.image ?? UIImage()
         self.imageScrollView?.set(image: imagePath)
     }
-    
-//    private func setupImageView() {
-//        view.addSubview(photoImageView)
-//        photoImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-//        photoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-//        photoImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-//        photoImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-//    }
+
     
     private func setupImageScrollView() {
         imageScrollView?.translatesAutoresizingMaskIntoConstraints = false
