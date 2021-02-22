@@ -17,7 +17,7 @@ class WaterfallLayout: UICollectionViewFlowLayout {
     
     weak var delegate: WaterfallLayoutDelegate!
     
-    var topInset: CGFloat = 16 {
+    var topInset: CGFloat = 8 {
         didSet {
             invalidateLayout()
         }
@@ -44,7 +44,7 @@ class WaterfallLayout: UICollectionViewFlowLayout {
     }
     
     private var itemSpacing: CGFloat {
-        return isSingleColumn ? 1 : 16
+        return isSingleColumn ? 1 : 8
     }
     
     private var columnWidth: CGFloat {

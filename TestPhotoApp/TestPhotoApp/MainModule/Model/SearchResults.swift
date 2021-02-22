@@ -15,7 +15,7 @@ struct SearchResults: Decodable {
 }
 
 struct UnsplashPhoto: Decodable {
-    let created_at: String?
+    let created_at: Date?
     let width: Int
     let height: Int
     let description: String?

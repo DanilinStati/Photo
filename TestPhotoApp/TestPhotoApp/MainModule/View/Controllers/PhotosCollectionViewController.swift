@@ -120,7 +120,7 @@ extension PhotosCollectionViewController: UICollectionViewDelegate, UICollection
         info.widthLabel.text = "Wight picture: \(data.width / 100) cm"
         info.heightLabel.text = "Height picture: \(data.height / 100) cm"
         info.descript.text = "Description: \(data.description ?? "N/A")"
-        info.createdAt.text = "Create: \(data.created_at ?? "N/A")"
+        info.createdAt.text = "Create: \(data.created_at?.convertToMonthYearFormat() ?? "N/A")"
         present(info, animated: true)
     }
     
@@ -144,6 +144,8 @@ extension PhotosCollectionViewController: UISearchBarDelegate {
     }
 }
 
+// MARK: - WaterfallLayoutDelegate
+
 extension PhotosCollectionViewController: WaterfallLayoutDelegate {
     func waterfallLayout(_ layout: WaterfallLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let photo = photos[indexPath.item]
@@ -151,5 +153,12 @@ extension PhotosCollectionViewController: WaterfallLayoutDelegate {
     }
 }
 
+// MARK: - Extension Date
 
-
+extension Date {
+    func convertToMonthYearFormat() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d MMM yyyy HH:mm"
+        return dateFormatter.string(from: self)
+    }
+}

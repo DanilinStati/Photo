@@ -19,6 +19,7 @@
 		A89066C325D7F83B00EABF60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A89066C225D7F83B00EABF60 /* Assets.xcassets */; };
 		A8E5218825DD78B3008215F9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E5218725DD78B3008215F9 /* InfoViewController.swift */; };
 		A8E5219525DE5D28008215F9 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E5219425DE5D28008215F9 /* PhotoViewController.swift */; };
+		A8E521BC25E1B927008215F9 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E521BB25E1B927008215F9 /* ImageScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		A89066C725D7F83B00EABF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8E5218725DD78B3008215F9 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A8E5219425DE5D28008215F9 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		A8E521BB25E1B927008215F9 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				A89066BD25D7F83B00EABF60 /* PhotosCollectionViewController.swift */,
 				A8E5218725DD78B3008215F9 /* InfoViewController.swift */,
 				A8E5219425DE5D28008215F9 /* PhotoViewController.swift */,
+				A8E521BB25E1B927008215F9 /* ImageScrollView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				A89066BE25D7F83B00EABF60 /* PhotosCollectionViewController.swift in Sources */,
 				A82D7F9E25DB1D2A00874E46 /* PhotoCell.swift in Sources */,
 				A8E5218825DD78B3008215F9 /* InfoViewController.swift in Sources */,
+				A8E521BC25E1B927008215F9 /* ImageScrollView.swift in Sources */,
 				A82D7F9B25DB0FC900874E46 /* SearchResults.swift in Sources */,
 				A89066BA25D7F83B00EABF60 /* AppDelegate.swift in Sources */,
 				A82D7FA725DC58BE00874E46 /* WaterfallLayout.swift in Sources */,
